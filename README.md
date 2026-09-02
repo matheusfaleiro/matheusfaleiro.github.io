@@ -45,4 +45,3 @@ npm run preview
 ## Deployment
 
 Pushes to the `main` branch automatically trigger the GitHub Actions workflow to build and deploy to GitHub Pages.
-
