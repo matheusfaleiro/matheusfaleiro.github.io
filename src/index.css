@@ -1,1 +1,127 @@
 @import 'tailwindcss';
+
+@import '@fontsource/space-mono/400.css';
+@import '@fontsource/space-mono/700.css';
+@import '@fontsource-variable/dm-sans';
+
+@theme {
+  /* Surfaces */
+  --color-surface-canvas: #000000;
+  --color-surface-polaroid: #fcfafa;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1b1b1b;
+  --color-surface-container: #1f1f1f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353535;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #393939;
+  --color-surface-variant: #353535;
+
+  /* On-surfaces */
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #c2c6d6;
+  --color-inverse-surface: #e2e2e2;
+  --color-inverse-on-surface: #303030;
+
+  /* Outlines */
+  --color-outline: #8c90a0;
+  --color-outline-variant: #424754;
+
+  /* Primary & Tints */
+  --color-primary: #aec6ff;
+  --color-on-primary: #002e6b;
+  --color-primary-container: #4f8eff;
+  --color-on-primary-container: #00275e;
+  --color-primary-fixed: #d8e2ff;
+  --color-primary-fixed-dim: #aec6ff;
+
+  /* Secondary */
+  --color-secondary: #5cdf81;
+  --color-on-secondary: #003917;
+  --color-secondary-container: #0aa750;
+  --color-on-secondary-container: #003113;
+  --color-secondary-fixed: #7afc9a;
+  --color-secondary-fixed-dim: #5cdf81;
+
+  /* Tertiary */
+  --color-tertiary: #ffa9fb;
+  --color-on-tertiary: #5a0060;
+  --color-tertiary-container: #df58e3;
+  --color-on-tertiary-container: #4e0054;
+
+  /* Accents / Tags */
+  --color-tag-cyan: #1abcfe;
+  --color-tag-emerald: #0acf83;
+  --color-tag-blue: #3a7dff;
+  --color-tag-blue-accessible: #2563eb;
+  --color-tag-purple: #a259ff;
+  --color-tag-purple-accessible: #7c3aed;
+  --color-tag-crimson: #f11e37;
+
+  /* Post-it Notes */
+  --color-postit-yellow: #fbf49a;
+  --color-postit-amber: #ffd19b;
+  --color-postit-peach: #ffd2a9;
+  --color-postit-pink: #fdbeef;
+  --color-postit-cyan: #9bdbff;
+  --color-postit-lime: #c4ffa9;
+  --color-postit-violet: #e0a6f4;
+
+  /* Typography Font Families */
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'DM Sans Variable', 'DM Sans', sans-serif;
+  --font-display-hero: 'Space Mono', monospace;
+  --font-headline-lg: 'Space Mono', monospace;
+  --font-headline-md: 'Space Mono', monospace;
+  --font-headline-sm: 'DM Sans Variable', 'DM Sans', sans-serif;
+  --font-body-lg: 'DM Sans Variable', 'DM Sans', sans-serif;
+  --font-body-md: 'DM Sans Variable', 'DM Sans', sans-serif;
+  --font-body-sm: 'DM Sans Variable', 'DM Sans', sans-serif;
+  --font-code-block: 'Space Mono', monospace;
+  --font-label-lg: 'DM Sans Variable', 'DM Sans', sans-serif;
+  --font-label-md: 'Space Mono', monospace;
+  --font-label-sm: 'Space Mono', monospace;
+
+  /* Spacing Scale */
+  --spacing-space-xs: 0.375rem;
+  --spacing-space-sm: 0.625rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.875rem;
+  --spacing-space-xl: 5rem;
+  --spacing-margin: 1.25rem;
+  --spacing-margin-desktop: 5rem;
+  --spacing-gutter: 1.25rem;
+  --spacing-gutter-desktop: 2.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-surface-canvas);
+    color: var(--color-on-surface);
+    font-family: var(--font-body-md);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

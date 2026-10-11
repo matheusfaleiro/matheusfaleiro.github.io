@@ -1,18 +1,22 @@
-import { Header } from '@/components/Header'
-import { Hero } from '@/components/Hero'
-import { Skills } from '@/components/Skills'
-import { Projects } from '@/components/Projects'
-import { Contact } from '@/components/Contact'
-import { Footer } from '@/components/Footer'
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
+import { Hero } from '@/components/sections/Hero'
+import { Principles } from '@/components/sections/Principles'
+import { Experience } from '@/components/sections/Experience'
+import { Skills } from '@/components/sections/Skills'
+import { Education } from '@/components/sections/Education'
+import { Contact } from '@/components/sections/Contact'
 
-function App() {
+export function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-indigo-500/30 selection:text-indigo-200">
+    <div className="min-h-screen bg-surface-canvas text-on-surface antialiased flex flex-col w-full">
       <Header />
-      <main className="max-w-6xl mx-auto px-6">
+      <main className="w-full pt-20 flex flex-col">
         <Hero />
+        <Principles />
+        <Experience />
         <Skills />
-        <Projects />
+        <Education />
         <Contact />
       </main>
       <Footer />
